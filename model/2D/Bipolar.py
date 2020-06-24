@@ -842,8 +842,7 @@ class bipolar(object):
         ax[1, 0].scatter(0.5*(self.time_array[0:-1]+self.time_array[1:]),
                          spindle_angular_velocity)
         ax[1, 0].scatter(self.time_array,
-                         (1.0 / (self.tau_r_vect
-                                 * self.centrosome_nucleus_distance)
+                         (1.0 / (self.tau_r_vect)
                           * np.array(self.torque_vect)), color='red')
         ax[1, 0].set_title('spindle angular velocity (blue) and torque (red)',
                            fontsize='medium')

@@ -380,16 +380,6 @@ class bipolar(object):
                                                self.metaphase_plate_2,
                                                self.x_array,
                                                self.y_array)
-    def get_torque_outdated(self, c_array, nMT_1, nMT_2, force_factor_1, force_factor_2):
-        """ an OUTDATED version which calculate the torque
-        by sampling the integrand and summing
-        This however turns out to require a very
-        large number of points for the result to be precise
-        """
-        return np.trapz(self.dldtheta_array * c_array * nMT_1 * force_factor_1
-                        + self.dldtheta_array * c_array * nMT_2 * force_factor_2,
-                        None,
-                        self.dtheta)
     def get_torque(self,
                    c_array,
                    spindle_angle,
